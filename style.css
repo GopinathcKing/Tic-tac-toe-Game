@@ -1,0 +1,118 @@
+/* Reset default units*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Main design */
+html{
+    text-align: center;
+    background-image: radial-gradient(rgb(94, 94, 94),#333,rgb(28, 28, 28));
+    min-height: 100vh;
+}
+.heading{
+    position: fixed;
+    top : 0;
+    width: 100%;
+    font-size: 2rem;
+    background-color: #F5F5DC;
+    min-height: 50px;
+}
+
+.board{
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    height: 100px;
+    width: 100px;
+    border: 3px double #800080;
+}
+.x-left {
+    background-color: rgb(255, 255, 255);
+    width: 5px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    transform: rotate(45deg);
+}
+.x-right{
+    background-color: rgb(255, 255, 255);
+    width: 5px;
+    height: 100px;
+    border-radius: 5px;
+    transform: rotate(90deg);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+.circle{
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px white;
+}
+.in-circle{
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 5px white;
+}
+.box:hover{
+    background-color: rgba(0, 0, 0, 0.68)
+}
+.box:active{
+    width: 95px;
+    height: 95px;
+    transform: translate(2px,2px);
+}
+
+.font{
+    color: white;
+    position: absolute;
+    width: 100%;
+    font-size: 3rem;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+    margin-top: 60px;
+    width: 150px;
+    height: 60px;
+    border-radius: 40px;
+    font-size: 2rem;
+    background-color: rgb(198, 198, 198);
+}
+button:hover{
+    background-color: white;
+}
+button:active{
+    transform: translateY(5px);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    color: white;
+    border-top: 3px double white;
+}
