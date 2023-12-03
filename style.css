@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 /* Reset default units*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bolder;
 }
 /* Main design */
 html{
@@ -39,7 +41,7 @@ html{
     height: 100px;
     width: 100px;
     border: 3px double #800080;
-    cursor: pointer;
+    cursor : pointer;
 }
 .x-left {
     background-color: rgb(255, 255, 255);
@@ -76,7 +78,7 @@ html{
     box-shadow: inset 0px 0px 5px white;
 }
 .box:hover{
-    background-color: rgba(0, 0, 0, 0.68)
+    background-color: rgba(0, 0, 0, 0.68);
 }
 .box:active{
     width: 95px;
@@ -111,9 +113,16 @@ button:active{
 
 footer{
     position: absolute;
+    padding: 1rem;
     bottom: 0;
     width: 100%;
     font-size: 1.5rem;
     color: white;
     border-top: 3px double white;
+}
+
+@media screen and (max-width:520px) {
+    .font{
+        font-size: 2rem;
+    }   
 }
