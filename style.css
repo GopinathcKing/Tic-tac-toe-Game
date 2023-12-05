@@ -10,84 +10,125 @@
 /* Main design */
 html{
     text-align: center;
-    background-image: radial-gradient(rgb(94, 94, 94),#333,rgb(28, 28, 28));
+    background: #084887;
     min-height: 100vh;
+    position: relative;
+    height: 120vh;
 }
 .heading{
     position: fixed;
     top : 0;
     width: 100%;
     font-size: 2rem;
-    background-color: #F5F5DC;
+    background-color: #30343F;
+    color: #FAFFF6;
+    text-shadow: 4px 0 6px black;
     min-height: 50px;
+    box-shadow: 5px 5px 10px black;
 }
 
 .board{
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
-    width: 320px;
-    height: 320px;
+    width: 400px;
+    height: 400px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
+    position: relative;
+    align-items: center;
+    align-content: center;
 }
+.line-one{
+    background-color: #FAF6F6;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 130px;
+        border-radius: 4px;
+}
+.line-two{
+    background-color: #FAF6F6;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 127px;
+    left: 0;
+    border-radius: 4px;
 
+}
+.line-three{
+    background-color: #FAF6F6;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 127px;
+    border-radius: 4px;
+
+}
+.line-four{
+    background-color: #FAF6F6;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 127px;
+    left: 0;
+    border-radius: 4px;
+}
 .box{
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background: none;
     height: 100px;
     width: 100px;
-    border: 3px double #800080;
     cursor : pointer;
 }
 .x-left {
-    background-color: rgb(255, 255, 255);
-    width: 5px;
+    background-color: #E4CC37;
+    width: 20px;
     height: 100px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7); */
     transform: rotate(45deg);
 }
 .x-right{
-    background-color: rgb(255, 255, 255);
-    width: 5px;
+    background-color: #E4CC37;
+    width: 20px;
     height: 100px;
     border-radius: 5px;
     transform: rotate(90deg);
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); */
 }
 
 .circle{
-    width: 80px;
-    height: 80px;
-    background-color: #fff;
+    width: 90px;
+    height: 90px;
+    background-color: #E4CC37;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 10px white;
+    /*box-shadow: 0px 0px 10px white;*/
 }
 .in-circle{
-    width: 70px;
-    height: 70px;
-    background-color: black;
+    width: 55px;
+    height: 55px;
+    background: #084887;
     border-radius: 50%;
-    box-shadow: inset 0px 0px 5px white;
+    /* box-shadow: inset 0px 0px 5px white; */
 }
 .box:hover{
-    background-color: rgba(0, 0, 0, 0.68);
+    background-color: #056092;
 }
-.box:active{
-    width: 95px;
-    height: 95px;
-    transform: translate(2px,2px);
-}
-
 .font{
-    color: white;
+    color: #FAFFF6;
+    text-shadow: 2px 2px 5px black;
+    /* text-decoration: underline dashed black 4px; */
     position: absolute;
     width: 100%;
     font-size: 3rem;
@@ -98,23 +139,27 @@ html{
 
 button{
     margin-top: 60px;
-    width: 150px;
+    width: 200px;
     height: 60px;
     border-radius: 40px;
     font-size: 2rem;
-    background-color: rgb(198, 198, 198);
+    background-color: #7E1946;
+    color: #ffffff;
+    transform: perspective(500px) rotateY(-20deg);
+    text-shadow: 5px 0 5px black;
+    transition: all .3s 0ms;
+    border: none;
 }
 button:hover{
-    background-color: white;
-}
-button:active{
-    transform: translateY(5px);
-}
+    background-color: #8b164b;
+    text-shadow: -6px 0 5px black;
+    transform: perspective(500px) rotateY(20deg);
 
+}
 footer{
     position: absolute;
-    padding: 1rem;
-    bottom: 0;
+    padding: .5rem;
+    bottom:0;
     width: 100%;
     font-size: 1.5rem;
     color: white;
