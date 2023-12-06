@@ -47,7 +47,8 @@ html{
     position: absolute;
     top: 0;
     left: 130px;
-        border-radius: 4px;
+    border-radius: 4px;
+    animation: line-grow .3s linear 1ms 2 alternate backwards;
 }
 .line-two{
     background-color: #FAF6F6;
@@ -57,7 +58,7 @@ html{
     top: 127px;
     left: 0;
     border-radius: 4px;
-
+    animation: line-grow .3s linear 1ms 2 alternate backwards;
 }
 .line-three{
     background-color: #FAF6F6;
@@ -67,7 +68,7 @@ html{
     top: 0;
     right: 127px;
     border-radius: 4px;
-
+    animation: line-grow .3s linear 1ms 2 alternate backwards;
 }
 .line-four{
     background-color: #FAF6F6;
@@ -77,6 +78,7 @@ html{
     bottom: 127px;
     left: 0;
     border-radius: 4px;
+    animation: line-grow .3s linear 1ms 2 alternate backwards;
 }
 .box{
     margin: auto;
@@ -84,8 +86,8 @@ html{
     justify-content: center;
     align-items: center;
     background: none;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     cursor : pointer;
 }
 .x-left {
@@ -93,7 +95,6 @@ html{
     width: 20px;
     height: 100px;
     border-radius: 5px;
-    /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7); */
     transform: rotate(45deg);
 }
 .x-right{
@@ -102,7 +103,6 @@ html{
     height: 100px;
     border-radius: 5px;
     transform: rotate(90deg);
-    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); */
 }
 
 .circle{
@@ -113,14 +113,12 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    /*box-shadow: 0px 0px 10px white;*/
 }
 .in-circle{
     width: 55px;
     height: 55px;
     background: #084887;
     border-radius: 50%;
-    /* box-shadow: inset 0px 0px 5px white; */
 }
 .box:hover{
     background-color: #056092;
@@ -128,7 +126,6 @@ html{
 .font{
     color: #FAFFF6;
     text-shadow: 2px 2px 5px black;
-    /* text-decoration: underline dashed black 4px; */
     position: absolute;
     width: 100%;
     font-size: 3rem;
@@ -165,9 +162,64 @@ footer{
     color: white;
     border-top: 3px double white;
 }
+@keyframes line-grow {
+    from{
+        scale: 127px;
+    }
+    to{
+        scale: 0;
+    }
+}
 
-@media screen and (max-width:520px) {
+@media screen and (max-width:404px) {
     .font{
         font-size: 2rem;
     }   
+    .board{
+        margin-left: 30px;
+        margin-right: 30px;
+        width: 370px;
+        height: 370px;
+        grid-template-columns: repeat(3,100px);
+        grid-template-rows: repeat(3,100px);
+    }
+    .line-one{
+        width: 8px;
+        height: 300px;
+        top: 37px;
+        left: 97px;
+    }
+    .line-two{
+        width: 300px;
+        height: 8px;
+        top: 130px;
+        left: 0;
+    }
+    .line-three{
+        width: 8px;
+        height: 300px;
+        top: 37px;
+        right: 165px;
+    }
+    .line-four{
+        width: 300px;
+        height: 8px;
+        bottom: 130px;
+        left: 0;
+    }
+    .x-left {
+        height: 85px;
+    }
+    .x-right{
+        height: 85px;
+    }
+    
+    .circle{
+        width: 80px;
+        height: 80px;
+    }
+    .in-circle{
+        width: 50px;
+        height: 50px;
+    }
 }
