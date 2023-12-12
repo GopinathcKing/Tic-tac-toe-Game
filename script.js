@@ -177,7 +177,7 @@ box4.addEventListener("click",addCircle = () =>{
                 div41.classList.add("x-left")
                 div42.classList.add("x-right")
                 xTurn=false;
-                box1NotClicked = false;
+                box4NotClicked = false;
                 box4Is="x";
                 decideWinner();
 
